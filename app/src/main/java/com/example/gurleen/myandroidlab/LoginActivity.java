@@ -15,6 +15,7 @@ public class LoginActivity extends Activity {
         final Button button =findViewById(R.id.button2);
 
 
+
     }
     public void onResume() {
 
@@ -39,7 +40,4 @@ public class LoginActivity extends Activity {
 
         super.onDestroy();
     }
-
-
-
 }
