@@ -1,6 +1,7 @@
 package com.example.gurleen.myandroidlab;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,18 +21,27 @@ public class LoginActivity extends Activity {
         final Button button =findViewById(R.id.button2);
         final EditText editText = (EditText) findViewById(R.id.editText);
 
-       // String text = editText.getText().toString();
-        SharedPreferences.Editor editor = getSharedPreferences(MY_PRFS_NAME, MODE_PRIVATE).edit();
-        editor.putString(editText.getText().toString(), null);
-        editor.apply();
+       String text = editText.getText().toString();
+        SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+        int defaultValue = getResources().getInteger(R.string.saved_high_score_default);
+        long highScore = sharedPref.getInt(getString(R.string.saved_high_score), defaultValue);
 
-        SharedPreferences sharedPreferences = null;
-        sharedPreferences.getString("DefaultEmail","email@domain.com");
+       // SharedPreferences.Editor editor = getSharedPreferences(MY_PRFS_NAME, MODE_PRIVATE).edit();
+        //editor.putString(editText.getText().toString(), null);
+        //editor.apply();
+
+        //SharedPreferences sharedPreferences = null;
+//        sharedPreferences.getString("DefaultEmail","email@domain.com");
 
 
 
 
     }
+
+    private Activity getActivity() {
+        return activity;
+    }
+
     public void onResume() {
 
         super.onResume();
