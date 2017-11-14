@@ -25,6 +25,7 @@
 
 
     <ImageButton android:src="@android:drawable/ic_menu_camera"
+        android:id="@+id/imageButton"
         android:layout_columnWeight="1"
         android:layout_gravity="fill"/>
 </GridLayout>
