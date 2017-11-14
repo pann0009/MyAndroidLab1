@@ -3,6 +3,7 @@ package com.example.gurleen.myandroidlab;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 
 public class LoginActivity extends Activity {
     protected static final String ACTIVITY_NAME = "LoginActivity";
@@ -11,6 +12,8 @@ public class LoginActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         Log.i(ACTIVITY_NAME, "In onCreate()");
+        final Button button =findViewById(R.id.button2);
+
 
     }
     public void onResume() {
