@@ -5,4 +5,8 @@
     <string name="Login">Login</string>
     <string name="login_name">Login Name</string>
     <string name="switch1">What does this do</string>
+    <string name="dialog_message">do you want to finish the activity</string>
+    <string name="dialog_title">Main Activity</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
 </resources>
