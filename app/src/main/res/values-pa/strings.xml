@@ -6,4 +6,7 @@
     <string name="Login">Login kro</string>
     <string name="login_name">Login Nam payo</string>
     <string name="switch1">Eh ki krda va</string>
+    <string name="dialog_message">do you want to finish the activity</string>
+    <string name="dialog_title">Main Activity</string>
+    <string name="cancel">CANCEL</string>
 </resources>
