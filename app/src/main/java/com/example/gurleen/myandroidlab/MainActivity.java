@@ -28,6 +28,9 @@ public class MainActivity extends Activity {
         if(requestCode==10){
             Log.i(ACTIVITY_NAME,"Returned to StartActivity.onActivityResult");
         }
+        if(requestCode==Activity.RESULT_OK){
+            String messagePassed = data.getStringExtra("Response");
+        }
 
     }
     public void onResume() {

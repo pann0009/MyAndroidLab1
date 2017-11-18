@@ -17,8 +17,10 @@
     <CheckBox
         android:layout_gravity="fill"
         android:layout_columnWeight="1"
+        android:id="@+id/checkbox"
         />
 <Switch
+    android:id="@+id/switch1"
     android:text="@string/switch1"
     android:layout_gravity="fill"
     android:layout_columnWeight="1"/>
