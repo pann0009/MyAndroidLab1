@@ -23,6 +23,15 @@ public class MainActivity extends Activity {
                 startActivityForResult(intent, 10);
             }
         });
+
+        Button startChat = findViewById(R.id.chatbutton);
+        startChat.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Log.i(ACTIVITY_NAME, "User clicked Start Chat");
+            }
+        });
     }
     public void onActivityResult(int requestCode, int responseCode, Intent data){
         if(requestCode==10){
@@ -31,6 +40,7 @@ public class MainActivity extends Activity {
         if(requestCode==Activity.RESULT_OK){
             String messagePassed = data.getStringExtra("Response");
         }
+
 
     }
     public void onResume() {

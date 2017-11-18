@@ -9,4 +9,6 @@
     <string name="dialog_message">do you want to finish the activity</string>
     <string name="dialog_title">Main Activity</string>
     <string name="cancel">CANCEL</string>
+    <string name="chatbutton">Chat Shru Kro</string>
+    <string name="sendButton">Bhej Do</string>
 </resources>

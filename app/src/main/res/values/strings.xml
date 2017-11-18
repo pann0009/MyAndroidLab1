@@ -9,4 +9,6 @@
     <string name="dialog_title">Main Activity</string>
     <string name="ok">OK</string>
     <string name="cancel">CANCEL</string>
+    <string name="chatbutton">Start Chat</string>
+    <string name="sendButton">Send</string>
 </resources>

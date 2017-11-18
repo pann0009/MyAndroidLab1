@@ -1,7 +1,6 @@
 package com.example.gurleen.myandroidlab;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,7 +11,7 @@ import android.widget.EditText;
 
 public class LoginActivity extends Activity {
     protected static final String ACTIVITY_NAME = "LoginActivity";
-    public static final  String MY_PRFS_NAME = "MyPrefsFile";
+   // public static final  String MY_PRFS_NAME = "MyPrefsFile";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
