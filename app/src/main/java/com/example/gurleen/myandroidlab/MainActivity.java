@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import <YOUR-PROJECT-PACKGENAME>.R;
+
 
 public class MainActivity extends Activity {
     protected static final String ACTIVITY_NAME = "MainActivity";
