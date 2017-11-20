@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.gurleen.myandroidlab.R;
+
 import java.util.ArrayList;
 
 public class ChatWindow extends Activity {

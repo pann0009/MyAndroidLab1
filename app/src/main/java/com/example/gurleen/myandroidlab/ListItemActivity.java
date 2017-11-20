@@ -2,7 +2,6 @@ package com.example.gurleen.myandroidlab;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -13,10 +12,10 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
-import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import com.example.gurleen.myandroidlab.R;
 public class ListItemActivity extends Activity {
     protected static final String ACTIVITY_NAME = "ListItemActivity";
     static final int REQUEST_IMAGE_CAPTURE = 10;

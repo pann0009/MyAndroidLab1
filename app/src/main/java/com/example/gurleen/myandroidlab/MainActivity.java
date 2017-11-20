@@ -6,18 +6,19 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-
+import android.widget.Toast;
 
 
 
 public class MainActivity extends Activity {
     protected static final String ACTIVITY_NAME = "MainActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.i(ACTIVITY_NAME, "In onCreate()");
-        Button button =  findViewById(R.id.button1);
+       Button button =  findViewById(R.id.button1);
         button.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -32,18 +33,23 @@ public class MainActivity extends Activity {
 
             @Override
             public void onClick(View view) {
-                Log.i(ACTIVITY_NAME, "User clicked Start Chat");
+
                 Intent intent = new Intent(MainActivity.this, ChatWindow.class);
-                startActivityForResult(intent,10);
+                startActivity(intent);
+                Log.i(ACTIVITY_NAME, "User clicked Start Chat");
             }
         });
     }
-    public void onActivityResult(int requestCode, int responseCode, Intent data){
-        if(requestCode==10){
-            Log.i(ACTIVITY_NAME,"Returned to StartActivity.onActivityResult");
-        }
-        if(requestCode==Activity.RESULT_OK){
-            String messagePassed = data.getStringExtra("Response");
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if ((requestCode == 10) && (resultCode == Activity.RESULT_OK)) {
+            String message = data.getStringExtra("Response");
+            String response = "ListItemsActivity passed: My information to share " + message;
+            Toast toast = Toast.makeText(MainActivity.this, response, Toast.LENGTH_LONG); //this is the ListActivity
+            Log.i(ACTIVITY_NAME, "Returned to StartActivity.onActivityResult");
+            toast.show();
+
+
         }
 
 
