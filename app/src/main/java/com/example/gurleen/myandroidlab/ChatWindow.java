@@ -20,9 +20,9 @@ public class ChatWindow extends Activity {
 ListView listView;
 EditText editText;
 Button sendButton;
-final ChatAdapter messageAdapter = new ChatAdapter(this);
+ChatAdapter messageAdapter;
 
-ArrayList<String> arrayList;
+ArrayList<String> arrayList = new ArrayList<String>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +30,7 @@ ArrayList<String> arrayList;
        listView = findViewById(R.id.listView);
        editText= findViewById(R.id.editTextChatWindow);
        sendButton = findViewById(R.id.sendButton);
+        messageAdapter = new ChatAdapter(this);
        listView.setAdapter(messageAdapter);
         sendButton.setOnClickListener(new View.OnClickListener(){
 
