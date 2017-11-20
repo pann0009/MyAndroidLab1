@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 
 
+
+
 public class MainActivity extends Activity {
     protected static final String ACTIVITY_NAME = "MainActivity";
     @Override
@@ -31,6 +33,8 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Log.i(ACTIVITY_NAME, "User clicked Start Chat");
+                Intent intent = new Intent(MainActivity.this, ChatWindow.class);
+                startActivityForResult(intent,10);
             }
         });
     }
