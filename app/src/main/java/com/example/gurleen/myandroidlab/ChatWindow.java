@@ -28,6 +28,7 @@ public class ChatWindow extends Activity {
     ChatAdapterHelper chatAdapterHelper;
     ArrayList<String> arrayList;
     SQLiteDatabase db;
+    Cursor c;
     private final String ACTIVITY_NAME = "ChatWindow";
 
     @Override
@@ -38,10 +39,10 @@ public class ChatWindow extends Activity {
         db = chatAdapterHelper.getWritableDatabase();
 
         arrayList = new ArrayList<String>();
-        Cursor c = db.rawQuery("select * from "+ ChatAdapterHelper.DATABASE_NAME, new String[]{});
-        Log.i(ACTIVITY_NAME, "Cursor’s  column count =" + c.getColumnCount() );
+         c = db.rawQuery("select * from " + ChatAdapterHelper.DATABASE_NAME, new String[]{});
+        Log.i(ACTIVITY_NAME, "Cursor’s  column count =" + c.getColumnCount());
         c.moveToFirst();
-        while(!c.isAfterLast() ) {
+        while (!c.isAfterLast()) {
             Log.i(ACTIVITY_NAME, "select * from " + ChatAdapterHelper.DATABASE_NAME
                     + c.getString(c.getColumnIndex(ChatAdapterHelper.KEY_MESSAGE)));
             arrayList.add(c.getString(c.getColumnIndex(ChatAdapterHelper.KEY_MESSAGE)));
@@ -100,5 +101,19 @@ public class ChatWindow extends Activity {
         }
 
 
+    }
+    public void onDestroy()
+    {
+
+        super.onDestroy();
+        if(c!= null)
+        {
+            c.close();
+        }
+
+        if(chatAdapterHelper!= null)
+        {
+            chatAdapterHelper.close();
+        }
     }
 }
