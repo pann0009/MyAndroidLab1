@@ -13,7 +13,7 @@ public class ChatAdapterHelper extends SQLiteOpenHelper {
     public static final String KEY_ID = "id";
     public static final String KEY_MESSAGE = "message";
     public static final String DATABASE_NAME = "Messages";
-    private static final int VERSION_NUM=1;
+    private static final int VERSION_NUM=2;
 
     @Override
     public void onCreate(SQLiteDatabase db) {
